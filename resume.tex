@@ -1,8 +1,20 @@
+% !TeX program = xelatex
 \documentclass{resume}
-\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{xeCJK}
 \usepackage{linespacing_fix}
 \usepackage{cite}
+\geometry{vmargin=0.43in}
 
+% 随项目提供的 TrueType 字体可在 PDF 中嵌入字形和 Unicode 映射。
+\setCJKmainfont[
+  Path = fonts/zh_CN-Arphic/,
+  AutoFakeBold = 2,
+  ItalicFont = gkai00mp.ttf,
+  SmallCapsFont = gbsn00lp.ttf,
+  SmallCapsFeatures = {FakeBold=2}
+]{gbsn00lp.ttf}
+
+\hypersetup{pdftitle={张绍磊 - 投资人版简历}, pdfauthor={张绍磊}, pageanchor=false}
 
 \definecolor{red1}{RGB}{139,0,0}
 
@@ -22,7 +34,7 @@
 
 %**********************************联系信息****************************************
 % \otherInfo{\faBookmark\ 生源地：北京}{\faPhone\ 13718537922}{\faHome\ \href{https://zhangshaolei1998.github.io/}{个人主页}}{\faEnvelope\ \href{mailto:zhangshaolei20z@ict.ac.cn}{zhangshaolei20z@ict.ac.cn}}
-\otherInfo{\faLocationArrow\ 中国人民大学 助理教授}{\faBookmark\ Data+AI (大模型、智能体系统、AI for Data Science)}{}{}{}
+\otherInfo{\faLocationArrow\ 中国人民大学助理教授}{\faBookmark\ 语音交互与 Agentic 双栈研究员}{}{}
 \otherInfo{\faPhone\ 13718537922$\;\;$}{\faHome\ \href{https://zhangshaolei1998.github.io/}{个人主页}}{\faEnvelope\ \href{mailto:zhangshaolei98@ruc.edu.cn}{zhangshaolei98@ruc.edu.cn}}{}
 % \otherInfo{\faGithub\ \href{https://github.com/zhangshaolei1998}{github.com/zhangshaolei1998}}{}{}{}
 
@@ -44,30 +56,25 @@
 
 %***大标题，下面有横线做分割
 %***一般的标题有：教育背景，实习（项目）经历，工作经历，自我评价，求职意向，等等
-\section{\textcolor{red1}{\faUser 个人背景}}
+\section{\textcolor{red1}{\faUser 技术简介}}
 \fontsize{10pt}{1ex}\selectfont
 
-\textbf{现于中国人民大学杜小勇教授（明理书院院长）、范举教授（国家优青）领导数据治理实验室开展大模型相关研究。}
+\textbf{国内少数同时具备实时语音模型、全模态交互模型和 Agentic 大模型后训练完整研发经验的研究者。}面向下一代实时交互式 Agent，推动大模型从能听、能说、能看，走向能推理、能调用工具、能自主完成任务。
 
 \vspace{2mm}
 
-\textbf{研究方向}：\textcolor{red1}{\textbf{人工智能与数据科学双向赋能}} (语言智能、模态智能、自主智能)
+\textbf{小米大模型核心团队顾问，MiMo-V2-Flash、MiMo-V2.5、MiMo-V2.6 核心贡献者。}现于中国人民大学数据治理实验室开展大模型研究（杜小勇、范举教授领衔）。
 
-\vspace{2mm}
+\section{\textcolor{red1}{\faBarChart\ 代表成果与产业落地}}
+\begin{itemize}[itemsep=2pt,parsep=0.3ex]
+    \item \textbf{实时语音模型}。提出 \textbf{\href{https://github.com/ictnlp/StreamSpeech}{StreamSpeech}}，在单个低延时模型中实现语音识别、翻译和合成，相关算法已在华为落地。参与研发实时语音对话模型 \mbox{\textbf{\href{https://github.com/ictnlp/LLaMA-Omni}{LLaMA-Omni}}}，开源项目获 3.1K GitHub 星标。
+    \item \textbf{全模态交互模型}。提出 \textbf{\href{https://github.com/ictnlp/Stream-Omni}{Stream-Omni}}，支持文本、视觉、语音的多种组合，实现实时交互。提出 \textbf{\href{https://github.com/ictnlp/LLaVA-Mini}{LLaVA-Mini}}，将单图像处理延时降至 40 ms。
+    \item \textbf{Agentic 大模型后训练}。提出 \textbf{\href{https://github.com/ruc-datalab/DeepAnalyze}{DeepAnalyze}}，通过课程式强化学习，使模型自主完成从数据准备到生成分析报告的全流程。项目已在电力、工业等场景落地，获 2 家头部企业感谢信，相关应用累计产生约 \textbf{1000 万元经济收益}。
+\end{itemize}
 
+\vspace{1mm}
 
-\textbf{发表论文}：发表论文\textbf{40余篇}，其中以第一/通讯作者发表论文\textbf{18篇}（CCF-A 类论文11篇、CCF-B 类论文3篇、ACL/EMNLP Findings 论文4篇）; Google Scholar引用\textbf{1500余次}；
-
-\vspace{2mm}
-
-\textbf{学术影响力}：大模型项目在GitHub累计获得\textbf{10000+星标}；模型下载量\textbf{100万余次}；现为小米大模型Core团队顾问；
-
-\vspace{2mm}
-
-
-\textbf{代表作}：DeepAnalyze（4.2K星标、2家单位感谢信-产生经济收益约 1000 万元）、StreamSpeech（1.2K星标、在华为落地）、LLaMA-Omni（3.1K星标）、LLaVA-Mini（600星标）、百聆系列（中科院计算所首个百亿规模大模型）
-
-
+\textbf{开源与学术影响}。大模型项目累计获得 \textbf{10,000+ GitHub 星标}，模型下载 \textbf{100 万余次}。发表论文 \textbf{40 余篇}，第一或通讯作者论文 \textbf{18 篇}（含 CCF-A 类 11 篇），Google Scholar 引用 \textbf{1500 余次}。
 
 
 \section{\textcolor{red1}{\faGraduationCap 教育背景}}
@@ -97,13 +104,7 @@
 \end{itemize}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.98\linewidth]{脉络.pdf}
-    \caption{近五年研究脉络}
-\end{figure}
-
-\section{\textcolor{red1}{\faBarChart\ 主要研究}}
+\section{\textcolor{red1}{\faCogs\ 主要研发经历}}
 
 
 % \textbf{\large \textcolor{red1}{DeepAnalyze：通过Agentic AI自动化实现数据科学全流程闭环}}
@@ -211,25 +212,11 @@
 
 \vspace{2mm}
 
-\textbf{\large \textcolor{red1}{（1）语言智能：训练驱动的大模型能力提升，提升基座模型在复杂任务中的智能水平}}
+\textbf{\large \textcolor{red1}{（1）实时语音与全模态交互}}
 \begin{itemize}[parsep=0.3ex]
-\item \textbf{预训练阶段}：参与小米大模型团队研发的 \textbf{\href{https://arxiv.org/pdf/2601.02780}{MiMo-V2-Flash}}，309B 参数 MoE 基座模型，27T tokens 预训练。
+\item \textbf{实时语音模型}。提出 \textbf{\href{https://arxiv.org/abs/2406.03049}{StreamSpeech}}，将语音识别、翻译与合成统一到同一个低延时语音模型。参与研发 \textbf{\href{https://arxiv.org/abs/2409.06666}{LLaMA-Omni}} 和 \textbf{\href{https://arxiv.org/abs/2505.02625}{LLaMA-Omni 2}}，实现开源大模型的实时语音对话。
 
-\item \textbf{后训练阶段}：提出 \textbf{\href{https://arxiv.org/abs/2306.10968}{BayLing-1}} / \textbf{\href{https://arxiv.org/abs/2411.16300}{BayLing-2}}，通过语言对齐实现跨语言迁移，支持 100+ 语言；提出 \textbf{\href{https://aclanthology.org/2025.emnlp-main.328/}{AlignX}}，通过表示对齐提升低资源语言与跨语言迁移能力；提出 \textbf{\href{https://arxiv.org/abs/2508.19839}{PSO-Merging}}，基于粒子群优化低成本融合多专家模型能力。
-
-\item \textbf{推理阶段}：提出 \textbf{\href{https://arxiv.org/abs/2402.17811}{TruthX}}，编辑大模型真实性空间，缓解大模型幻觉；提出 \textbf{\href{https://aclanthology.org/2024.findings-acl.645/}{TACS}}，上下文真实性检测，降低错误输入误导；提出 \textbf{\href{https://aclanthology.org/2025.emnlp-main.537/}{IG-Pruning}}，输入自适应层级剪枝，降低推理成本。
-
-\item \textbf{\textcolor{red2}{学术影响}}：相关成果形成 8 篇论文，包括 ACL、EMNLP 等会议论文及开源技术报告；TruthX 被\textbf{Manuela Veloso（ACM/IEEE Fellow、美国工程院院士）}、\textbf{Anna Korhonen（ACL Fellow）}评价为大模型幻觉缓解代表性工作，被 MIT 研究人员评价其为“\textbf{对大模型内部机制的重要探索}”。推理时的系列研究并被 Google Research、Microsoft Research、NVIDIA 等国际一线研究机构在大模型幻觉机理、大模型推理综述中引用。
-\item \textbf{\textcolor{red2}{开源系统}}：BayLing 在中科南京信息高铁研究院线上部署，吸引100余家单位申请内测，被国际开放基准委员会评为“\textbf{Top 100 Open-source Achievements}”；MiMo-V2 系列模型在权威基准\textbf{ AA 榜全球 Top5、国内第一}，并在 OpenRouter 平台取得\textbf{调用量周榜第一}。
-
-\end{itemize}
-
-
-\textbf{\large \textcolor{red1}{（2）模态智能：数据驱动的多模态表示学习，提升大模型对视觉、语音与时序数据建模能力}}
-\begin{itemize}[parsep=0.3ex]
-\item \textbf{视觉数据}：提出 \textbf{\href{https://arxiv.org/abs/2501.03895}{LLaVA-Mini}}，支持图像、高分辨率图像与视频的高效理解，单图像处理延时降至 40ms，单卡 24GB GPU 支持超过 1 万帧视频处理。提出 \textbf{\href{https://arxiv.org/pdf/2506.13642}{Stream-Omni}}，支持文本、视觉、语音各种多模态组合下的实时交互。
-
-\item \textbf{语音数据}：提出 \textbf{\href{https://arxiv.org/abs/2406.03049}{StreamSpeech}}，首个支持语音识别、语音翻译与语音合成的“All in One”语音模型，支持低延时实时语音交互；提出 \textbf{\href{https://arxiv.org/abs/2409.06666}{LLaMA-Omni}} / \textbf{\href{https://arxiv.org/abs/2505.02625}{LLaMA-Omni 2}}，首个类 GPT-4o 开源实时语音对话大模型系列。
+\item \textbf{全模态交互与高效视觉理解}。提出 \textbf{\href{https://arxiv.org/pdf/2506.13642}{Stream-Omni}}，支持文本、视觉、语音多种组合下的实时交互。提出 \textbf{\href{https://arxiv.org/abs/2501.03895}{LLaVA-Mini}}，支持图像、高分辨率图像与视频的高效理解，单图像处理延时降至 40 ms，单卡 24 GB GPU 支持超过 1 万帧视频处理。
 
 \item \textbf{时序数据}：围绕“何时读取、何时处理”的实时序列决策问题，提出 \textbf{\href{https://aclanthology.org/2022.acl-long.176/}{Dual Paths}}、\textbf{\href{https://openreview.net/forum?id=9y0HFvaAYD6}{HMT}}、\textbf{\href{https://aclanthology.org/2022.emnlp-main.65/}{ITST}}、\textbf{\href{https://aclanthology.org/2021.findings-emnlp.121/}{GMA}} 等方法，基于对偶学习、隐马尔可夫模型、最优运输与高斯混合模型学习动态对齐策略，在同声传译任务下取得最佳效果。
 
@@ -239,9 +226,10 @@
 \end{itemize}
 
 
-\textbf{\large \textcolor{red1}{（3）自主智能：反馈驱动的智能体自主进化，提升智能体在复杂环境中完成长程任务能力}}
+\textbf{\large \textcolor{red1}{（2）Agentic 大模型后训练与自主执行}}
 \begin{itemize}[parsep=0.3ex]
-\item \textbf{进化方面}：提出 \textbf{\href{https://arxiv.org/abs/2510.16872}{DeepAnalyze}}，首个自主数据科学大模型，通过课程式强化学习完成数据科学全流程与开放式数据研究；提出 \textbf{\href{https://arxiv.org/abs/2602.07371}{DeepPrep}}，基于树式推理的自主数据准备智能体，支持多步规划、执行反馈与自我修正；提出 \textbf{\href{https://zhangshaolei1998.github.io/}{DataEvolver}}，面向大模型训练数据的自进化系统，通过环境反馈迭代提升训练数据质量。
+\interlinepenalty=10000
+\item \textbf{强化学习与自主执行}。提出 \textbf{\href{https://arxiv.org/abs/2510.16872}{DeepAnalyze}}，通过课程式强化学习训练模型进行多步推理、工具调用和任务执行，完成数据科学全流程与开放式数据研究。提出 \textbf{\href{https://arxiv.org/abs/2602.07371}{DeepPrep}}，以树式推理支持自主数据准备中的多步规划、执行反馈与自我修正。提出 \textbf{\href{https://zhangshaolei1998.github.io/}{DataEvolver}}，利用环境反馈迭代提升大模型训练数据质量。
 
 \item \textbf{记忆方面}：提出 \textbf{\href{https://arxiv.org/abs/2601.06789}{MemGovern}}，长期智能体记忆治理框架，支持记忆写入、筛选、压缩、更新与遗忘，降低记忆污染；提出 \textbf{\href{https://arxiv.org/abs/2601.06966}{RealMem}}，真实交互场景下的智能体记忆评测基准，衡量长期信息的存储、检索、更新与利用能力；提出 \textbf{\href{https://arxiv.org/abs/2411.19443}{Auto-RAG}}，自主迭代检索增强生成，自动完成检索规划、证据选择与答案生成。
 
@@ -252,6 +240,19 @@
 \item \textbf{\textcolor{red2}{开源系统}}：DeepAnalyze 开源项目获得\textbf{ 4.2K GitHub 星标}，线上系统收到国内 300 余所高校与科研机构试用申请；已在电力、工业等行业场景落地，\textbf{获得 2 家头部企业感谢信，累计产生经济收益约 1000 万元}；在部分场景中支撑百万级数据处理与数十万次分析任务，相较传统方式实现 80\%--300\% 效率提升，年节约人力成本数百万元；入选\textbf{第 19 届中国大学生计算机设计大赛大数据主题赛官方支撑智能体}。
 \end{itemize}
 
+
+\textbf{\large \textcolor{red1}{（3）基座模型研发与通用能力优化}}
+\begin{itemize}[parsep=0.3ex]
+\item \textbf{小米 MiMo 系列}。作为 \textbf{\href{https://arxiv.org/pdf/2601.02780}{MiMo-V2-Flash}}、\textbf{MiMo-V2.5} 和 \textbf{MiMo-V2.6} 的核心贡献者参与模型研发。MiMo-V2-Flash 是 309B 参数 MoE 基座模型，使用 27T tokens 进行预训练。
+
+\item \textbf{后训练阶段}：提出 \textbf{\href{https://arxiv.org/abs/2306.10968}{BayLing-1}} / \textbf{\href{https://arxiv.org/abs/2411.16300}{BayLing-2}}，通过语言对齐实现跨语言迁移，支持 100+ 语言；提出 \textbf{\href{https://aclanthology.org/2025.emnlp-main.328/}{AlignX}}，通过表示对齐提升低资源语言与跨语言迁移能力；提出 \textbf{\href{https://arxiv.org/abs/2508.19839}{PSO-Merging}}，基于粒子群优化低成本融合多专家模型能力。
+
+\item \textbf{推理阶段}：提出 \textbf{\href{https://arxiv.org/abs/2402.17811}{TruthX}}，编辑大模型真实性空间，缓解大模型幻觉；提出 \textbf{\href{https://aclanthology.org/2024.findings-acl.645/}{TACS}}，上下文真实性检测，降低错误输入误导；提出 \textbf{\href{https://aclanthology.org/2025.emnlp-main.537/}{IG-Pruning}}，输入自适应层级剪枝，降低推理成本。
+
+\item \textbf{\textcolor{red2}{学术影响}}：相关成果形成 8 篇论文，包括 ACL、EMNLP 等会议论文及开源技术报告；TruthX 被\textbf{Manuela Veloso（ACM/IEEE Fellow、美国工程院院士）}、\textbf{Anna Korhonen（ACL Fellow）}评价为大模型幻觉缓解代表性工作，被 MIT 研究人员评价其为“\textbf{对大模型内部机制的重要探索}”。推理时的系列研究并被 Google Research、Microsoft Research、NVIDIA 等国际一线研究机构在大模型幻觉机理、大模型推理综述中引用。
+\item \textbf{\textcolor{red2}{开源系统}}：BayLing 在中科南京信息高铁研究院线上部署，吸引100余家单位申请内测，被国际开放基准委员会评为“\textbf{Top 100 Open-source Achievements}”；MiMo-V2 系列模型在权威基准\textbf{ AA 榜全球 Top5、国内第一}，并在 OpenRouter 平台取得\textbf{调用量周榜第一}。
+
+\end{itemize}
 
 
 % \datedsubsection{\textbf{1. \underline{TruthX}}：\textit{通过编辑LLM内部表示来激活LLM输出真实性的推理时对齐方法}}{}
@@ -398,25 +399,9 @@
 
 
 
-\section{\textcolor{red1}{\faCogs\ 项目主持}}
-\datedsubsection{\textbf{国家重点研发计划子课题（老年人群电诈风险监测预警关键技术研究）} - \textit{主持}}{2026.6 - 至今}
-
-
-\datedsubsection{\textbf{中国计算机学会-蚂蚁联合基金（基于分层强化学习的大模型工具使用方法）} - \textit{主持}}{2025.12 - 至今}
-
-\datedsubsection{\textbf{中国人民大学-小米大模型联合重点实验室（多模态大模型关键技术研究）} - \textit{主持}}{2025.09 - 至今}
-
-\datedsubsection{\textbf{与腾讯的产学研合作（面向数据分析的Agentic大模型工具调用研究）} - \textit{主持}}{2025.12 - 至今}
-
-\datedsubsection{\textbf{国家重点研发计划子课题（保密）} - \textit{参与}}{2020.05 - 2022.06}
-\datedsubsection{\textbf{国家重点研发计划项目``基于神经网络的汉泰机器翻译研究''} - \textit{参与}}{2021.06 - 2022.07}
-
-
 \section{\textcolor{red1}{\faCommenting\ 开源项目}}
 
 \begin{itemize}[parsep=0.3ex]
-\large
-%\fontsize{11pt}{0.2ex}\selectfont
 
 \item \datedline{\textbf{DeepAnalyze} [\href{https://github.com/ruc-datalab/DeepAnalyze}{GitHub}]：自主数据科学大模型}{4.2K星标}
 
@@ -464,7 +449,6 @@
 
 \begin{itemize}[parsep=0.3ex]
 %\fontsize{11pt}{0.2ex}\selectfont
-\large
     % \item \datedline{北京市三好学生、北京市优秀毕业生}{2018/2020}
     % \item \datedline{中国科学院大学\ 优秀共产党员}{2021}
     % \item \datedline{中国科学院大学\ 三好学生、三好学生标兵}{2021/2022/2023/2024}
@@ -484,7 +468,6 @@
 \section{\textcolor{red1}{\faStreetView\ 学术服务}}
 \begin{itemize}[parsep=0.3ex]
 %\fontsize{11pt}{0.2ex}\selectfont
-\large
     \item 2020-2024中国中文信息学会青年工作委员会学生执委会\ \textcolor{red2}{\textit{主任}}
     \item CCF-A类国际会议 ACL ARR \textcolor{red2}{\textit{领域主席}} (Area Chair)
     \item 国内会议 YSSNLP 2024、CCL 2024 \textcolor{red2}{\textit{论坛主席}} (Session Chair)
@@ -494,19 +477,9 @@
     % \item EMNLP 2021、EMNLP 2022、COLING 2022论文预讲会\ \textit{程序委员会主席}
 \end{itemize}
 
-\section{\textcolor{red1}{\faClipboard\ 教学工作}}
-\begin{itemize}[parsep=0.3ex]
-%\fontsize{11pt}{0.2ex}\selectfont
-\large
-    \item 中国人民大学专业核心课：高级Python程序设计
-    \item 中国人民大学专业核心课：数据科学导论
-    \item 中国人民大学专业核心课：大模型系统
-
-\end{itemize}
-
 \section{\textcolor{red1}{\faBook\ 论文发表}}
 \large\textbf{以第一作者/通讯作者在人工智能国际顶级会议发表论文\ \textcolor{red2}{18}\ 篇 （$\dagger$：通讯作者）}
-\fontsize{10pt}{0.4ex}\selectfont
+\fontsize{9pt}{9.7pt}\selectfont
 \begin{enumerate}[label={[\arabic*]},parsep=0ex]
 % \normalsize
     \item \textbf{Shaolei\ Zhang}, Ju Fan, Meihao Fan, Guoliang Li, Xiaoyong Du. DeepAnalyze: Agentic Large Language Models for Autonomous Data Science. \textit{ICML 2026} (\textcolor{red2}{CCF-A}). [\href{https://arxiv.org/pdf/2510.16872}{PDF}] [\href{https://github.com/ruc-datalab/DeepAnalyze}{Code}] [\href{https://ruc-deepanalyze.github.io/}{Homepage}]
@@ -578,7 +551,7 @@
 \end{enumerate}
 
 \large\textbf{合作论文\ \textcolor{red1}{21}\ 篇}
-\fontsize{10pt}{0.4ex}\selectfont
+\fontsize{9pt}{9.7pt}\selectfont
 \begin{enumerate}[label={[\arabic*]},parsep=0ex]
 % \normalsize
 
